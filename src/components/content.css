@@ -1,0 +1,135 @@
+@media print, (min-width: 578px) {
+    .resume-content {
+        display: flex;
+        width: 100%;
+    }
+    
+    .resume-content-left {
+        flex: 1;
+        padding-right: 1em;
+    }
+    
+    .resume-content-right {
+        flex: 1;
+        padding-left: 1em;
+    }
+}
+
+@media screen and (max-width: 577px) {
+    .resume-content-divider {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .content-title-box {
+        background-color: #ececec;
+    }
+
+    .content-section-title-l {
+        border-top: 1px solid #ededed;
+    }
+
+    .content-section-title-r {
+        border-top: 1px solid #ededed;
+    }
+
+    .content-details-markdown em {
+        box-shadow: inset 0 -12px #efefef;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .content-title-box {
+        background-color: #696969;
+    }
+
+    .content-section-title-l {
+        border-top: 1px solid #707070;
+    }
+
+    .content-section-title-r {
+        border-top: 1px solid #707070;
+    }
+
+    .content-details-markdown em {
+        box-shadow: inset 0 -12px #404040;
+    }
+}
+
+.content-title {
+    display: flex;
+    align-items: center;
+}
+
+.content-section-title {
+    flex: auto;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.content-title-box {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin: 0 2em;
+}
+
+.content-section-title-l {
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    flex: 5;
+}
+
+.content-section-title-r {
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    flex: 5;
+}
+
+.content-details-item {
+    display: flex;
+}
+
+.content-details-icon {
+    display: inline-block;
+}
+
+.content-details-title {
+    margin: 0;
+    flex: 1;
+}
+
+.content-details-location {
+    margin: 0;
+    flex: 1;
+}
+
+.content-details-badge {
+    flex: 1;
+    text-align: right;
+}
+
+.content-details-badge-box {
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 0.25em;
+}
+
+.content-details-markdown {
+    font-size: 14px;
+}
+
+.content-details-markdown em {
+    padding: 1px;
+    font-style: normal;
+    font-size: 14px;
+}
+
+@media print {
+    .resume-content {
+        width: 100%;
+        height: 100%;
+    }
+}

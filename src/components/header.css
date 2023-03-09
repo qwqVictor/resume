@@ -1,0 +1,47 @@
+.resume-header {
+    width: 100%;
+}
+
+.header-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.header-left {
+    display: inline-block;
+    flex: 1;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    flex: 1;
+}
+
+.header-contact a {
+    text-decoration: inherit;
+}
+
+.header-bottom-alignment {
+    align-items: end;
+}
+
+.header-left > h1 {
+    font-size: 28pt;
+    margin-bottom: 0;
+}
+
+.english-name {
+    font-size: 12pt;
+    padding-left: 0.8em;
+}
+
+@media (max-width: 577px) {
+    .english-name {
+        display: block;
+        padding-left: 0;
+        font-size: 10pt;
+    }
+}
