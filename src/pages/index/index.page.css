@@ -1,3 +1,41 @@
+@keyframes slidein {
+  from {
+    opacity: 0.2;
+    margin-top: -4rem;
+  }
+
+  to {
+    opacity: 1;
+    margin-top: 0rem;
+  }
+}
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  box-shadow: 0 0 15px #c0c0c0;
+  flex-direction: column;
+  place-items: top;
+  transition: all .2s ease-in-out;
+  animation: slidein;
+  animation-duration: 2s;
+  font-size: 12pt;
+}
+
+@media print {
+  .container {
+    display: block;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    box-shadow: none;
+    zoom: 82%;
+    overflow: hidden;
+  }
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, -apple-system,
     "Helvetica Neue",
@@ -38,25 +76,6 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
 #root {
   width: 100%;
   height: 100%;
@@ -82,12 +101,15 @@ p {
     color: #213547;
     background-color: #ffffff;
   }
+
   a {
     color: #213547
   }
+
   a:hover {
     color: #213547;
   }
+
   button {
     background-color: #f9f9f9;
   }

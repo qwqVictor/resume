@@ -1,9 +1,8 @@
-import { useEffect, useRef } from 'react'
-import './App.css'
-import Content from './components/content'
-import Header from './components/header'
+import './index.page.css'
+import Content from '../../components/content'
+import Header from '../../components/header'
 
-function App() {
+function Page() {
   return (
     <>
       <p></p>
@@ -19,4 +18,4 @@ function App() {
   )
 }
 
-export default App
+export { Page }
