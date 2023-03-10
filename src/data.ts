@@ -1,5 +1,6 @@
 import { ResumeData } from "./types/data"
 
+export const title: string = "Resume | 黄凯升"
 const data: ResumeData = {
     name: "黄凯升",
     englishName: "Huang Kaisheng",
