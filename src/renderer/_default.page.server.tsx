@@ -12,7 +12,10 @@ async function render(pageContext: PageContextBuiltIn) {
     );
 
     return dangerouslySkipEscape(indexHtml
-        .replace('<!-- title-outlet -->', `<title>${escapeInject`${title}`}</title>`)
-        .replace('<!-- ssr-outlet ->', dangerouslySkipEscape(viewHtml)._escaped)
+        /* without strict escaping can cause security risks, 
+         * but it is not an externally controllable variable.
+         */
+        .replace('<!-- title-outlet -->', `<title>${title.replace("<", "&lt;").replace(">", "&gt;")}</title>`)
+        .replace('<!-- ssr-outlet -->', dangerouslySkipEscape(viewHtml)._escaped)
     )
 }
