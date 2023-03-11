@@ -1,0 +1,27 @@
+.floating-buttons {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 0.5em;
+    transition: all .2s ease-in-out;
+    animation: slidein;
+    animation-duration: 2s;
+}
+
+.floating-button {
+    padding: 0.35em;
+    color: #ffffff;
+    font-size: 0.8rem;
+    display: block;
+    text-decoration: none;
+}
+
+.floating-button-icon {
+    padding-right: 0.5em;
+}
+
+@media print {
+    .floating-buttons {
+        display: none;
+    }
+}
