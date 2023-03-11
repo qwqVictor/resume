@@ -73,7 +73,7 @@ const data: ResumeData = {
     experiences2: [{
         title: "专业能力",
         details: [`
-- *7年* Linux服务器学习和实践经验，*3年*校内 bare-metal 实际运维经验，具备扎实的计算机网络等知识基础
+- *7年* Linux 服务器学习和实践经验，*3年*校内 bare-metal 实际运维经验，具备扎实的计算机网络等知识基础
 - 熟悉主流的 Linux 发行版，对 iptables 等 Linux 组件有丰富的实践经验
 - 对 *Docker*、*Kubernetes* 等容器和容器编排技术有丰富的实践经验，了解云原生相关概念，熟悉 *Nginx*、*Traefik* 等业务网关
 - 精通 *shell*、*Python*、*JavaScript*、*TypeScript*，对 *Golang*、*PHP*、*C/C++*、*Java* 有一定了解，独立使用以上语言编写过程序
