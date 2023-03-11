@@ -118,13 +118,13 @@
 }
 
 .content-details-markdown {
-    font-size: 14px;
+    font-size: 10pt;
 }
 
 .content-details-markdown em {
     padding: 1px;
     font-style: normal;
-    font-size: 14px;
+    font-size: 10pt;
 }
 
 @media print {
