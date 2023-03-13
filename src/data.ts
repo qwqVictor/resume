@@ -76,7 +76,7 @@ const data: ResumeData = {
 - Linux 服务器学习和实践经验丰富，校内有丰富的 bare-metal 实际运维经验，具备扎实的计算机网络等知识基础
 - 熟悉主流的 Linux 发行版，对 iptables 等 Linux 组件有丰富的实践经验
 - 对 *Docker*、*Kubernetes* 等容器和容器编排技术有丰富的实践经验，了解云原生相关概念，熟悉 *Nginx*、*Traefik* 等业务网关
-- 精通 *shell*、*Python*、*JavaScript*、*TypeScript*，对 *Golang*、*PHP*、*C/C++*、*Java* 有一定了解，独立使用以上语言编写过程序
+- 熟练掌握 *shell*、*Python*、*JavaScript*、*TypeScript*，对 *Golang*、*PHP*、*C/C++*、*Java* 有一定了解，独立使用以上语言编写过程序
   + 有能力编写脚本进行自动化运维，并能够独立进行小规模项目的前后端开发
   + 前端方面：熟练使用浏览器 DevTools 进行调试，熟悉 *React* 框架，使用过 *Vue*（[本简历使用 React 编写](https://github.com/qwqVictor/resume)）
   + 后端方面：能够基于 *Node.js* 的 Express + TypeORM 或 Python 的 Flask、FastAPI 进行小型工程的后端开发，对 JSON Web Token 等常见鉴权方式有所了解。
