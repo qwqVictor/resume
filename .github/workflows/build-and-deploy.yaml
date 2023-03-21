@@ -29,17 +29,11 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: "16"
-
-    - name: Cache pnpm and node-modules
-      uses: auguwu/node-pm-cache@master
-      with:
-        node-modules: ./node_modules
-        package-manager: yarn
+        cache: 'yarn'
 
     - name: Bootstrap dependencies
       run: |
         sudo apt install -y fonts-noto-color-emoji fonts-wqy-microhei
-        npm install -g yarn
 
     - name: Bootstrap node environment
       run: |
