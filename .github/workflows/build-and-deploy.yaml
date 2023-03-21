@@ -55,10 +55,10 @@ jobs:
     needs: build
     steps:
     - name: Fetch HTML dist files
-        uses: actions/download-artifact@v3
-        with:
-          name: client
-          path: dist/client
+      uses: actions/download-artifact@v3
+      with:
+        name: client
+        path: dist/client
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
