@@ -13,6 +13,12 @@ on:
       - 'README.md'
       - 'LICENSE'
       - 'docs'
+
+  permissions:
+    pages: write
+    id-token: write
+    contents: read
+
 jobs:
   build:
     runs-on: ubuntu-22.04
@@ -53,15 +59,10 @@ jobs:
   deploy:
     runs-on: ubuntu-22.04
     needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-    - name: Fetch HTML dist files
-      uses: actions/download-artifact@v3
-      with:
-        name: client
-        path: dist/client
-
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist/client
+      id: deployment
+      uses: actions/deploy-pages@v1
