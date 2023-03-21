@@ -44,10 +44,9 @@ jobs:
         yarn build
 
     - name: Upload HTML dist files to artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-pages-artifact@v1
       with:
         path: dist/client
-        if-no-files-found: error
 
   deploy:
     runs-on: ubuntu-22.04
