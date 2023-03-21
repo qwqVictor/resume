@@ -1,9 +1,9 @@
 import { existsSync } from 'node:fs'
-import { mkdir, readFile } from 'node:fs/promises'
-import { chdir, exit } from 'node:process'
+import { readFile } from 'node:fs/promises'
+import { exit } from 'node:process'
 import puppeteer from "puppeteer"
 import path from 'path';
-import { fileURLToPath, pathToFileURL } from 'url'
+import { fileURLToPath } from 'url'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -11,6 +11,7 @@ const __dirname = path.dirname(__filename)
 const prefix = path.join(__dirname, "..", "dist", "client")
 const pagename = path.join(prefix, "index.html")
 const pdfname = path.join(prefix, "resume.pdf")
+const baseUrl = "http://resume.mock" + (process.env["BASE_PREFIX"] ?? "/")
 
 if (!existsSync(pagename)) {
     console.error("Build failed! exiting.", pagename)
@@ -25,10 +26,10 @@ try {
 
     await page.setRequestInterception(true)
     page.on("request", async (request) => {
-        if (request.url().startsWith("http://resume.mock")) {
-            let urlPath = request.url().split('http://resume.mock')[1]
-            if (urlPath == '/')
-                urlPath = "/index.html"
+        if (request.url().startsWith(baseUrl)) {
+            let urlPath = request.url().split(baseUrl)[1]
+            if (!urlPath)
+                urlPath = "index.html"
             const content = await readFile(path.join(prefix, urlPath))
             request.respond({
                 body: content,
@@ -41,7 +42,7 @@ try {
 
     console.log("[Print] Loading the generated page...")
 
-    await page.goto("http://resume.mock/")
+    await page.goto(baseUrl)
     await page.emulateMediaType("print")
 
     console.log("[Print] Printing to PDF...")
