@@ -37,7 +37,7 @@ jobs:
     - name: Build HTML dist files
       run: |
         if [ -z "$BASE_PREFIX" ]; then
-          export BASE_PREFIX="$GITHUB_REPOSITORY"
+          export BASE_PREFIX="/$(echo "$GITHUB_REPOSITORY" | cut -d '/' -f 2)/"
         fi
         yarn build
 
