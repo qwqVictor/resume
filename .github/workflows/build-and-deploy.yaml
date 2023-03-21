@@ -46,7 +46,6 @@ jobs:
     - name: Upload HTML dist files to artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: client
         path: dist/client
         if-no-files-found: error
 
