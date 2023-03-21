@@ -9,5 +9,6 @@ export default defineConfig({
   })],
   define: {
     __RESUME_LAST_UPDATED_BUILD_TIME: new Date().toLocaleDateString("zh-CN")
-  }
+  },
+  base: process.env["BASE_PREFIX"] ?? "/"
 })

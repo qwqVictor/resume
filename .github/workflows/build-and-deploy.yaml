@@ -36,6 +36,9 @@ jobs:
 
     - name: Build HTML dist files
       run: |
+        if [ -z "$BASE_PREFIX" ]; then
+          export BASE_PREFIX="$GITHUB_REPOSITORY"
+        fi
         yarn build
 
     - name: Upload HTML dist files to artifacts
