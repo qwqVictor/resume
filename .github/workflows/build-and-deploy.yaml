@@ -32,7 +32,7 @@ jobs:
 
     - name: Bootstrap dependencies
       run: |
-        apt install -y fonts-noto-color-emoji fonts-wqy-microhei
+        sudo apt install -y fonts-noto-color-emoji fonts-wqy-microhei
         npm install -g yarn
 
     - name: Bootstrap node environment
