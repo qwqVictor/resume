@@ -1,0 +1,67 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ "master" ]
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+      - 'docs'
+  pull_request:
+    branches: [ "master" ]
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+      - 'docs'
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v3
+      with:
+        node-version: "16"
+
+    - name: Cache pnpm and node-modules
+      uses: auguwu/node-pm-cache@master
+      with:
+        node-modules: ./node_modules
+        package-manager: yarn
+
+    - name: Bootstrap dependencies
+      run: |
+        apt install -y fonts-noto-color-emoji fonts-wqy-microhei
+        npm install -g yarn
+
+    - name: Bootstrap node environment
+      run: |
+        yarn
+
+    - name: Build HTML dist files
+      run: |
+        yarn build
+
+    - name: Upload HTML dist files to artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: client
+        path: dist/client
+        if-no-files-found: error
+
+  deploy:
+    runs-on: ubuntu-22.04
+    needs: build
+    steps:
+    - name: Fetch HTML dist files
+        uses: actions/download-artifact@v3
+        with:
+          name: client
+          path: dist/client
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist/client
