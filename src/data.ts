@@ -98,7 +98,7 @@ const data: ResumeData = {
 - HomeIDC: 喜欢折腾一些有趣的东西，在家购置了一台二手服务器，基于 Proxmox VE 作为虚拟化平台，通过 Samba 搭建了 NAS 系统，通过 Active Directory 和 Keycloak 构建了家中的统一认证系统，K3S 作为 Kubernetes 发行版，[个人博客](https://qwq.ren)运行于家中
 - [CQUPT-ics](https://github.com/qwqVictor/CQUPT-ics): 基于 Python 异步 FastAPI 后端编写的课表-日历订阅转换 API
 - [LyricsV-core](https://github.com/qwqVictor/LyricsV-core): 通过 TypeScript、winax 实现的 iTunes 滚动歌词核心实现
-- [未来程序·改（未完工）](https://www.luogu.com.cn/paste/4bpa9035): 一个 C++ 子集的编译器前端和运行时，已经能运行简单的程序，完善中
+- [未来程序·改](https://blog.qwq.ren/posts/how-to-ac-future-program-edit-1-compiler-frontend-and-interpreter/): 一个 C++ 子集的编译器前端和运行时，已经能运行简单的程序
 `]
     }]
 }
