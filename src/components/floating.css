@@ -20,6 +20,17 @@
     padding-right: 0.5em;
 }
 
+.floating-select {
+    background-color: transparent;
+    width: min-content;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.floating-select-option {
+    color: initial;
+}
+
 @media print {
     .floating-buttons {
         display: none;

@@ -1,6 +1,8 @@
 import './header.css'
-import data from "../data"
-function Header() {
+import { i18nConverter } from '../i18n'
+import { ResumeData } from '../types/data'
+
+function Header({ i18n: $, data } : { i18n: i18nConverter, data: ResumeData }) {
 
   return (
     <header className="resume-header">
@@ -18,12 +20,12 @@ function Header() {
       <hr />
       <section className="header-row">
         <div className="header-left">
-          <p>{data.sex} / {((date) => {
+          <p>{data.sex} / {$('T_Age', ((date) => {
             const now = new Date()
             if (now.getMonth() > date.getMonth() || (now.getMonth() == date.getMonth() && now.getDate() >= date.getDate()))
               return now.getFullYear() - date.getFullYear()
             else return now.getFullYear() - date.getFullYear() - 1
-          })(data.birthday)} 岁</p>
+          })(data.birthday).toString())}</p>
           <p>{data.university.type} / {data.university.begin} ~ {data.university.begin + (data.university.duration ?? 4)}</p>
           <p>{data.university.name} / {data.university.subject}</p>
         </div>

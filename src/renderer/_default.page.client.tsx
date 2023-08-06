@@ -8,7 +8,7 @@ async function render(pageContext: PageContextBuiltIn) {
   const { Page } = pageContext
   document.title = title
   ReactDOM.hydrate(
-    <Page />,
+    <Page defaultLanguage={navigator.languages[0]} />,
     document.getElementById("root")
   );
 }

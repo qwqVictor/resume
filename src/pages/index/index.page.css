@@ -11,19 +11,6 @@
     margin-top: 0rem;
   }
 }
-.container {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  display: flex;
-  box-shadow: 0 0 15px #c0c0c0;
-  flex-direction: column;
-  place-items: top;
-  transition: all .2s ease-in-out;
-  animation: slidein;
-  animation-duration: 2s;
-  font-size: 12pt;
-}
 
 :root {
   font-family: -apple-system,
@@ -120,16 +107,6 @@ p {
   }
   .resume-last-updated {
     visibility: hidden;
-  }
-  .container {
-    display: block;
-    padding: 0;
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-    box-shadow: none;
-    zoom: 82%;
-    overflow: hidden;
   }
 }
 

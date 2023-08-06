@@ -3,12 +3,13 @@ import { dangerouslySkipEscape, escapeInject } from "vite-plugin-ssr";
 import type { PageContextBuiltIn } from 'vite-plugin-ssr'
 import indexHtml from '../../index.html?raw'
 import { title } from "../data";
+import { langSet } from "../i18n";
 export { render };
 
 async function render(pageContext: PageContextBuiltIn) {
     const { Page } = pageContext;
     const viewHtml = ReactDOMServer.renderToString(
-        <Page />
+        <Page defaultLanguages={langSet} />
     );
 
     return dangerouslySkipEscape(indexHtml

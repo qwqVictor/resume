@@ -1,3 +1,7 @@
+import { Language } from "../i18n"
+
+export type ResumeDataI18n = Record<Language, ResumeData>
+
 export type ResumeData = {
     name: string,
     altName?: string

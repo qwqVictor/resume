@@ -1,9 +1,9 @@
 import './content.css'
-import data from "../data"
 import ReactMarkdown from 'react-markdown'
-import { ResumeExperience } from '../types/data'
+import { ResumeData, ResumeExperience } from '../types/data'
+import { i18nConverter } from '../i18n'
 
-function Content() {
+function Content({ i18n: $, data }: { i18n: i18nConverter, data: ResumeData }) {
 
   const render = (experience: ResumeExperience, index: number) => {
     return (
