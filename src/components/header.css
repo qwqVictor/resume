@@ -33,13 +33,13 @@
     margin-bottom: 0;
 }
 
-.english-name {
+.alternative-name {
     font-size: 12pt;
     padding-left: 0.8em;
 }
 
-@media (max-width: 577px) {
-    .english-name {
+@media screen and (max-width: 577px) {
+    .alternative-name {
         display: block;
         padding-left: 0;
         font-size: 10pt;

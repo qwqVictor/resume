@@ -1,6 +1,6 @@
 export type ResumeData = {
     name: string,
-    englishName?: string
+    altName?: string
     job: string,
     sex: string,
     birthday: Date,

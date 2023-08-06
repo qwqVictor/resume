@@ -3,7 +3,7 @@ import { ResumeData } from "./types/data"
 export const title: string = "Resume | 黄凯升"
 const data: ResumeData = {
     name: "黄凯升",
-    englishName: "Huang Kaisheng",
+    altName: "Huang Kaisheng",
     job: "运维开发 / 全栈开发",
     sex: "男",
     birthday: new Date("2002-05-10"),

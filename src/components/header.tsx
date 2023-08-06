@@ -8,7 +8,7 @@ function Header() {
         <div className="header-left">
           <h1>
             {data.name}
-            <span className="english-name">{data.englishName ?? ""}</span>
+            <span className="alternative-name">{data.altName ?? ""}</span>
           </h1>
         </div>
         <div className="header-right header-bottom-alignment">
