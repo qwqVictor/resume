@@ -53,11 +53,11 @@ function Content({ i18n: $, data }: { i18n: i18nConverter, data: ResumeData }) {
   }
   return (
     <div className="resume-content">
-      <div className="resume-content-left">
+      <div className="resume-content-side resume-content-left">
         {data.experiences1.map(render)}
       </div>
       <hr className="resume-content-divider" />
-      <div className="resume-content-right">
+      <div className="resume-content-side resume-content-right">
         {data.experiences2.map(render)}
       </div>
     </div>
