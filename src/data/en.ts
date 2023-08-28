@@ -44,7 +44,7 @@ Major in Software Engineering. Rated at top 20%. Weighted average score of compu
             content: `
 *JD Cloud* *Platform Operation Engineer*
 
-Involved in the operation and maintenance of JD Cloud. Will deeply participate in the maintenance work and troubleshooting of JDOS, the self-developed Kubernetes release version of JD.
+Involved in the operation and maintenance of JD Cloud. Will participate in the maintenance work and troubleshooting of JD.com's infrastructure. And undertaken some development tasks of auto-ops products.
 `
         }, {
             title: {
