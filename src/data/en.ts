@@ -27,14 +27,14 @@ export default {
             },
             content: `Chongqing University of Posts and Telecommunications.
 
-Major in Software Engineering. Rated at top 20%. Weighted average score of compulsory courses is 83.44.`
+Major in Software Engineering. Rated at top 20%. Weighted average score of compulsory courses is 82.73.`
         }]
     },
     {
         title: "Practices",
         details: [{
             title: {
-                text: "2023.7 - Now",
+                text: "2023.7 - 2023.9",
                 icon: ""
             },
             location: "JD.com",

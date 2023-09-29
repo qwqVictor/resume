@@ -25,14 +25,14 @@ export default {
             badge: {
                 text: "本科在读",
             },
-            content: `软件工程专业，学业水平在专业内前 20%，必修课加权均分 83.44。`
+            content: `软件工程专业，学业水平在专业内前 20%，必修课加权均分 82.73。`
         }]
     },
     {
         title: "实践经历",
         details: [{
             title: {
-                text: "2023.7 至今",
+                text: "2023.7 - 2023.9",
                 icon: ""
             },
             location: "京东集团",
